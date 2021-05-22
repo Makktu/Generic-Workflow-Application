@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(43, 41, 41);
+    color: #fff;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    /* my dark styling */
+    /* background-color: rgb(19, 17, 17);
+    color: rgb(236, 222, 222); */
+}
+
+a {
+    color: yellow;
+}
+
+h1 {
+    margin: 5px 0px;
+    font-size: 1.5rem;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    border-radius: 10px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.5s ease-in;
+    /* border: 1px solid rgb(230, 236, 230); */
+    /* display: none; */
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 2px;
+    right: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panel table {
+    /* font-size: 24px; */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    /* bottom: 2px;
+    right: 20px; */
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active table {
+    opacity: 1;
+    transition: opacity 1.4s ease-in 0.4s;
+}
+
+.panel.active {
+    flex: 7;
+    background-image: none;
+    /* linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)); */
+}
+
+.panel.all-tasks {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        url("iss-security.png");
+    background-size: cover;
+}
+
+.panel.active.all-tasks {
+    /* background-image: none; */
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)),
+        url("iss-security.png");
+    background-size: cover;
+}
+
+.panel.porters {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        url("nurses.png");
+}
+
+.panel.active.porters {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)),
+        url("nurses.png");
+}
+.panel.domestic {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        url("cleaning-hand.png");
+    /* background-size: cover; */
+}
+
+.panel.active.domestic {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)),
+        url("cleaning-hand.png");
+    /* background-size: cover; */
+}
+.panel.catering {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        url("https://images.unsplash.com/photo-1607637508318-d22cfb4299d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+    background-size: cover;
+}
+
+.panel.active.catering {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)),
+        url("https://images.unsplash.com/photo-1607637508318-d22cfb4299d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+    background-size: cover;
+}
+.panel.vinci {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        url("https://images.unsplash.com/photo-1606337321936-02d1b1a4d5ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80");
+    background-size: cover;
+}
+
+.panel.active.vinci {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)),
+        url("https://images.unsplash.com/photo-1606337321936-02d1b1a4d5ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80");
+    background-size: cover;
+}
+
+.panel.active.new-task {
+    flex: 1;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.2s ease-in 0.4s;
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+input,
+textarea,
+select {
+    font-size: 1.1rem;
+    font-family: inherit;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(199, 213, 218);
+    width: 95%;
+    border-radius: 5px;
+}
+
+select {
+    background-color: rgb(147, 211, 145);
+}
+
+#date-time {
+    margin: 2px;
+    font-size: 1.3rem;
+}
+
+#job-number {
+    color: rgb(179, 241, 8);
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+th {
+    text-decoration: underline;
+}
+
+button {
+    font-size: 1.1rem;
+    margin-left: 15px;
+}
+
+table {
+    width: 100%;
+}
+
+.portering {
+    display: none;
+}
+
+.all-jobs {
+    display: none;
+}
+
+/* .all-jobs {
+    background-color: rgb(231, 240, 237);
+}
+
+.all-jobs.active {
+    display: contents;
+}
+
+.inactive {
+    display: none;
+} */
+
+/* .inactive-porter {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(117, 117, 194);
+} */
+
+.landing-page h1 {
+    font-size: 3rem;
+}
+.landing-page a {
+    align-items: center;
+}
+
+#job-num {
+    width: 1%;
+}
+#the-deets {
+    width: 40%;
+}
+
+#staff {
+    /* margin-left: 20px; */
+}
+
+#hd-op {
+    width: 10%;
+}

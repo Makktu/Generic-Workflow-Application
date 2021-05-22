@@ -79,7 +79,7 @@ h1 {
 }
 
 .panel.all-tasks {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
         url("iss-security.png");
     background-size: cover;
 }

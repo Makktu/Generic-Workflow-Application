@@ -85,7 +85,7 @@ h1 {
 
 .panel.active.all-tasks {
     /* background-image: none; */
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)),
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)),
         url("iss-security.png");
     background-size: cover;
 }
